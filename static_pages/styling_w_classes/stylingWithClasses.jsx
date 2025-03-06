@@ -1,18 +1,24 @@
 import { createRoot } from "react-dom/client"
 const root = createRoot(document.getElementById("root"))
 
-/** Challenge:
- * Move the `main` element into its own component called "MainContent"
- * and render that component inside the Page component.
- *
- * Do the same with the `footer` element, moving it into a new
- * component called "Footer"
+/** STYLING WITH CLASSES
+ * In React and JSX, using classes is almost exactly the same as how we would do it in vanilla HTML
+ * Since we link the css file in the head of our html file, we can call css classes in our React components
+ * There is only one slight difference, instead of class="" we use className=""
+ * Under the hood of React, we are telling React via JSX to access the native DOM property for the JS Object it will create
  */
 
 function Header() {
     return (
         <header>
             <img src="../react-logo.png" alt="React logo" width="40px" />
+            <nav>
+                <ul className="nav-list">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
         </header>
     )
 }
